@@ -15,6 +15,8 @@
 		1D528D792042963C00F42D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D528D772042963C00F42D10 /* LaunchScreen.storyboard */; };
 		1D528D842042963C00F42D10 /* ThreeLetterKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D832042963C00F42D10 /* ThreeLetterKeyboardTests.swift */; };
 		1D528D8F2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D8E2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift */; };
+		1D528D9E2042A08C00F42D10 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D9D2042A08C00F42D10 /* Word.swift */; };
+		1D528DA02042A60800F42D10 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D9F2042A60800F42D10 /* Dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1D528D8A2042963C00F42D10 /* ThreeLetterKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeLetterKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D528D8E2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeLetterKeyboardUITests.swift; sourceTree = "<group>"; };
 		1D528D902042963C00F42D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D528D9D2042A08C00F42D10 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		1D528D9F2042A60800F42D10 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		1D528D6A2042963C00F42D10 /* ThreeLetterKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				1D528D9C2042A06B00F42D10 /* Model */,
 				1D528D6B2042963C00F42D10 /* AppDelegate.swift */,
 				1D528D6D2042963C00F42D10 /* ViewController.swift */,
 				1D528D6F2042963C00F42D10 /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				1D528D902042963C00F42D10 /* Info.plist */,
 			);
 			path = ThreeLetterKeyboardUITests;
+			sourceTree = "<group>";
+		};
+		1D528D9C2042A06B00F42D10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D528D9D2042A08C00F42D10 /* Word.swift */,
+				1D528D9F2042A60800F42D10 /* Dictionary.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D528D742042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodeld in Sources */,
+				1D528DA02042A60800F42D10 /* Dictionary.swift in Sources */,
+				1D528D9E2042A08C00F42D10 /* Word.swift in Sources */,
 				1D528D6E2042963C00F42D10 /* ViewController.swift in Sources */,
 				1D528D6C2042963C00F42D10 /* AppDelegate.swift in Sources */,
 			);
