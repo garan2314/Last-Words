@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D528D6C2042963C00F42D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D6B2042963C00F42D10 /* AppDelegate.swift */; };
+		1D528D6E2042963C00F42D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D6D2042963C00F42D10 /* ViewController.swift */; };
+		1D528D712042963C00F42D10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D528D6F2042963C00F42D10 /* Main.storyboard */; };
+		1D528D742042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D722042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodeld */; };
+		1D528D762042963C00F42D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D528D752042963C00F42D10 /* Assets.xcassets */; };
+		1D528D792042963C00F42D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D528D772042963C00F42D10 /* LaunchScreen.storyboard */; };
+		1D528D842042963C00F42D10 /* ThreeLetterKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D832042963C00F42D10 /* ThreeLetterKeyboardTests.swift */; };
+		1D528D8F2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D8E2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D528D802042963C00F42D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D528D602042963B00F42D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D528D672042963C00F42D10;
+			remoteInfo = ThreeLetterKeyboard;
+		};
+		1D528D8B2042963C00F42D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D528D602042963B00F42D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D528D672042963C00F42D10;
+			remoteInfo = ThreeLetterKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D528D682042963C00F42D10 /* ThreeLetterKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeLetterKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D528D6B2042963C00F42D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D528D6D2042963C00F42D10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D528D702042963C00F42D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D528D732042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThreeLetterKeyboard.xcdatamodel; sourceTree = "<group>"; };
+		1D528D752042963C00F42D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D528D782042963C00F42D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D528D7A2042963C00F42D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D528D7F2042963C00F42D10 /* ThreeLetterKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeLetterKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D528D832042963C00F42D10 /* ThreeLetterKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeLetterKeyboardTests.swift; sourceTree = "<group>"; };
+		1D528D852042963C00F42D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D528D8A2042963C00F42D10 /* ThreeLetterKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeLetterKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D528D8E2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeLetterKeyboardUITests.swift; sourceTree = "<group>"; };
+		1D528D902042963C00F42D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D528D652042963C00F42D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D528D7C2042963C00F42D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D528D872042963C00F42D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D528D5F2042963B00F42D10 = {
+			isa = PBXGroup;
+			children = (
+				1D528D6A2042963C00F42D10 /* ThreeLetterKeyboard */,
+				1D528D822042963C00F42D10 /* ThreeLetterKeyboardTests */,
+				1D528D8D2042963C00F42D10 /* ThreeLetterKeyboardUITests */,
+				1D528D692042963C00F42D10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D528D692042963C00F42D10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D528D682042963C00F42D10 /* ThreeLetterKeyboard.app */,
+				1D528D7F2042963C00F42D10 /* ThreeLetterKeyboardTests.xctest */,
+				1D528D8A2042963C00F42D10 /* ThreeLetterKeyboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D528D6A2042963C00F42D10 /* ThreeLetterKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1D528D6B2042963C00F42D10 /* AppDelegate.swift */,
+				1D528D6D2042963C00F42D10 /* ViewController.swift */,
+				1D528D6F2042963C00F42D10 /* Main.storyboard */,
+				1D528D752042963C00F42D10 /* Assets.xcassets */,
+				1D528D772042963C00F42D10 /* LaunchScreen.storyboard */,
+				1D528D7A2042963C00F42D10 /* Info.plist */,
+				1D528D722042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodeld */,
+			);
+			path = ThreeLetterKeyboard;
+			sourceTree = "<group>";
+		};
+		1D528D822042963C00F42D10 /* ThreeLetterKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D528D832042963C00F42D10 /* ThreeLetterKeyboardTests.swift */,
+				1D528D852042963C00F42D10 /* Info.plist */,
+			);
+			path = ThreeLetterKeyboardTests;
+			sourceTree = "<group>";
+		};
+		1D528D8D2042963C00F42D10 /* ThreeLetterKeyboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D528D8E2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift */,
+				1D528D902042963C00F42D10 /* Info.plist */,
+			);
+			path = ThreeLetterKeyboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D528D672042963C00F42D10 /* ThreeLetterKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D528D932042963C00F42D10 /* Build configuration list for PBXNativeTarget "ThreeLetterKeyboard" */;
+			buildPhases = (
+				1D528D642042963C00F42D10 /* Sources */,
+				1D528D652042963C00F42D10 /* Frameworks */,
+				1D528D662042963C00F42D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeLetterKeyboard;
+			productName = ThreeLetterKeyboard;
+			productReference = 1D528D682042963C00F42D10 /* ThreeLetterKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D528D7E2042963C00F42D10 /* ThreeLetterKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D528D962042963C00F42D10 /* Build configuration list for PBXNativeTarget "ThreeLetterKeyboardTests" */;
+			buildPhases = (
+				1D528D7B2042963C00F42D10 /* Sources */,
+				1D528D7C2042963C00F42D10 /* Frameworks */,
+				1D528D7D2042963C00F42D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D528D812042963C00F42D10 /* PBXTargetDependency */,
+			);
+			name = ThreeLetterKeyboardTests;
+			productName = ThreeLetterKeyboardTests;
+			productReference = 1D528D7F2042963C00F42D10 /* ThreeLetterKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D528D892042963C00F42D10 /* ThreeLetterKeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D528D992042963C00F42D10 /* Build configuration list for PBXNativeTarget "ThreeLetterKeyboardUITests" */;
+			buildPhases = (
+				1D528D862042963C00F42D10 /* Sources */,
+				1D528D872042963C00F42D10 /* Frameworks */,
+				1D528D882042963C00F42D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D528D8C2042963C00F42D10 /* PBXTargetDependency */,
+			);
+			name = ThreeLetterKeyboardUITests;
+			productName = ThreeLetterKeyboardUITests;
+			productReference = 1D528D8A2042963C00F42D10 /* ThreeLetterKeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D528D602042963B00F42D10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = miim;
+				TargetAttributes = {
+					1D528D672042963C00F42D10 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					1D528D7E2042963C00F42D10 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D528D672042963C00F42D10;
+					};
+					1D528D892042963C00F42D10 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D528D672042963C00F42D10;
+					};
+				};
+			};
+			buildConfigurationList = 1D528D632042963B00F42D10 /* Build configuration list for PBXProject "ThreeLetterKeyboard" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D528D5F2042963B00F42D10;
+			productRefGroup = 1D528D692042963C00F42D10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D528D672042963C00F42D10 /* ThreeLetterKeyboard */,
+				1D528D7E2042963C00F42D10 /* ThreeLetterKeyboardTests */,
+				1D528D892042963C00F42D10 /* ThreeLetterKeyboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D528D662042963C00F42D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D528D792042963C00F42D10 /* LaunchScreen.storyboard in Resources */,
+				1D528D762042963C00F42D10 /* Assets.xcassets in Resources */,
+				1D528D712042963C00F42D10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D528D7D2042963C00F42D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D528D882042963C00F42D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D528D642042963C00F42D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D528D742042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodeld in Sources */,
+				1D528D6E2042963C00F42D10 /* ViewController.swift in Sources */,
+				1D528D6C2042963C00F42D10 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D528D7B2042963C00F42D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D528D842042963C00F42D10 /* ThreeLetterKeyboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D528D862042963C00F42D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D528D8F2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D528D812042963C00F42D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D528D672042963C00F42D10 /* ThreeLetterKeyboard */;
+			targetProxy = 1D528D802042963C00F42D10 /* PBXContainerItemProxy */;
+		};
+		1D528D8C2042963C00F42D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D528D672042963C00F42D10 /* ThreeLetterKeyboard */;
+			targetProxy = 1D528D8B2042963C00F42D10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D528D6F2042963C00F42D10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D528D702042963C00F42D10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D528D772042963C00F42D10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D528D782042963C00F42D10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D528D912042963C00F42D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D528D922042963C00F42D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D528D942042963C00F42D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 547K33EUK7;
+				INFOPLIST_FILE = ThreeLetterKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miim.ThreeLetterKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D528D952042963C00F42D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 547K33EUK7;
+				INFOPLIST_FILE = ThreeLetterKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miim.ThreeLetterKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1D528D972042963C00F42D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 547K33EUK7;
+				INFOPLIST_FILE = ThreeLetterKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miim.ThreeLetterKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeLetterKeyboard.app/ThreeLetterKeyboard";
+			};
+			name = Debug;
+		};
+		1D528D982042963C00F42D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 547K33EUK7;
+				INFOPLIST_FILE = ThreeLetterKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miim.ThreeLetterKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeLetterKeyboard.app/ThreeLetterKeyboard";
+			};
+			name = Release;
+		};
+		1D528D9A2042963C00F42D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 547K33EUK7;
+				INFOPLIST_FILE = ThreeLetterKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miim.ThreeLetterKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThreeLetterKeyboard;
+			};
+			name = Debug;
+		};
+		1D528D9B2042963C00F42D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 547K33EUK7;
+				INFOPLIST_FILE = ThreeLetterKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miim.ThreeLetterKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThreeLetterKeyboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D528D632042963B00F42D10 /* Build configuration list for PBXProject "ThreeLetterKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D528D912042963C00F42D10 /* Debug */,
+				1D528D922042963C00F42D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D528D932042963C00F42D10 /* Build configuration list for PBXNativeTarget "ThreeLetterKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D528D942042963C00F42D10 /* Debug */,
+				1D528D952042963C00F42D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D528D962042963C00F42D10 /* Build configuration list for PBXNativeTarget "ThreeLetterKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D528D972042963C00F42D10 /* Debug */,
+				1D528D982042963C00F42D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D528D992042963C00F42D10 /* Build configuration list for PBXNativeTarget "ThreeLetterKeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D528D9A2042963C00F42D10 /* Debug */,
+				1D528D9B2042963C00F42D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1D528D722042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1D528D732042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodel */,
+			);
+			currentVersion = 1D528D732042963C00F42D10 /* ThreeLetterKeyboard.xcdatamodel */;
+			path = ThreeLetterKeyboard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1D528D602042963B00F42D10 /* Project object */;
+}
