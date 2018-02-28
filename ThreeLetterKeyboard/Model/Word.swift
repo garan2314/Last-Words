@@ -11,8 +11,8 @@ import Foundation
 public class Word{
     
     public var letters : [String]
-    public var isValid : Bool? //if word is legit in current state
-    public var hasMore : Bool? //if word has more possible words
+    public var isValid : Bool //if word is legit in current state
+    public var hasMore : Bool //if word has more possible words
     
     //for creation of words from empty
     init() {
@@ -26,6 +26,9 @@ public class Word{
     init(chars : String)
     {
         letters = []
+        
+        isValid = true
+        hasMore = true
         
         for char in chars{
             if char != " "
@@ -52,7 +55,17 @@ public class Word{
         hasMore = true
     }
     
+    func setBestWord()
+    {
+        letters = getBestWord().letters //set the current word to the best possible word rn
+    }
     
+    func getBestWord(no: Int = 1) -> Word {
+
+        var bestWord = getPossibleWords()[no-1]
+
+        return bestWord
+    }
     
     //get the nth possible letter based on what has been written so far
     func getNextLetter(no : Int) -> String { //getLetter is non zero indexed
@@ -153,7 +166,7 @@ public class Word{
     
     
     //displays word
-    public func display()
+    public func display() -> String
     {
         var dword : String = ""
         
@@ -163,16 +176,7 @@ public class Word{
         
         dword = dword.capitalized
         
-        if isValid!
-        {
-            dword = dword + " is valid!"
-        }
-        print(dword)
-        
-        if !hasMore!
-        {
-            print("No more possible words")
-        }
+        return dword
     }
 }
 

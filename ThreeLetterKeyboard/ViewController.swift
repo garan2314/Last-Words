@@ -38,7 +38,24 @@ class ViewController: UIViewController {
         }
         
         print("current word:")
-        newWord.display()
+        
+        var string = newWord.display()
+        
+        if newWord.isValid
+        {
+            string + " is valid!"
+        }
+        
+        print(string)
+        
+        
+        if !newWord.hasMore
+        {
+            print("No more possible words")
+        }
+        print("–––––––––––––")
+        
+        print("likely word: " + newWord.getBestWord().display())
         print("–––––––––––––")
     }
     
