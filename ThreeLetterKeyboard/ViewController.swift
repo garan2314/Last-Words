@@ -17,15 +17,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        update()
         type(letter: "b")
         type(letter: "o")
         type(letter: "o")
         type(letter: "b")
         type(letter: "s")
-        newWord.save()
-        
-        newWord.letters = []
+        save()
         type(letter: "b")
         type(letter: "o")
         type(letter: "o")
@@ -51,6 +49,15 @@ class ViewController: UIViewController {
         update()
     }
     
+    func save()
+    {
+        newWord.save()
+        print("saved '" + newWord.toString()+"'")
+        newWord.letters = []
+        update()
+    }
+
+    
     func update(){
         
         let next3 = newWord.getNextFew()
@@ -59,13 +66,13 @@ class ViewController: UIViewController {
             print(letter)
         }
         
-        print("current word:")
+        print("current word: ")
         
         var string = newWord.toString()
         
         if newWord.isValid
         {
-            string + " is valid!"
+            string = string + " is valid!"
         }
         
         print(string)

@@ -30,6 +30,10 @@ public class WordDictionary
         addWord(chars: "applecider")
         addWord(chars: "bone")
         addWord(chars: "buttocks")
+        addWord(chars: "bobs")
+        addWord(chars: "vagene")
+        addWord(chars: "manko")
+        
         
         //https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt
     }
