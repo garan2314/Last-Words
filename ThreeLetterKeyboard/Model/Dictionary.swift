@@ -33,6 +33,7 @@ public class WordDictionary
     }
     
     func addWord(chars : String) {
+        //check if word exists first, if it does, increase the priority??
         WordDictionary.DefaultDictionary.append(Word(chars: chars))
     }
 }

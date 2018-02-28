@@ -18,18 +18,40 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        type(letter: "a")
-        type(letter: "p")
-        type(letter: "p")
-        type(letter: "l")
-        type(letter: "i")
-        newWord.removeLetter()
-        type(letter: "e")
-        type(letter: "c")
+        type(letter: "b")
+        type(letter: "o")
+        type(letter: "o")
+        type(letter: "b")
+        type(letter: "s")
+        newWord.save()
+        
+        newWord.letters = []
+        type(letter: "b")
+        type(letter: "o")
+        type(letter: "o")
+        best()
+        
     }
     
-    func type(letter : String){
+    func type(letter : String)
+    {
         newWord.addLetter(letter: letter)
+        update()
+    }
+    
+    func back()
+    {
+        newWord.removeLetter()
+        update()
+    }
+    
+    func best()
+    {
+        newWord.setBestWord()
+        update()
+    }
+    
+    func update(){
         
         let next3 = newWord.getNextFew()
         
@@ -39,7 +61,7 @@ class ViewController: UIViewController {
         
         print("current word:")
         
-        var string = newWord.display()
+        var string = newWord.toString()
         
         if newWord.isValid
         {
@@ -55,8 +77,13 @@ class ViewController: UIViewController {
         }
         print("–––––––––––––")
         
-        print("likely word: " + newWord.getBestWord().display())
-        print("–––––––––––––")
+        
+        var bestWord = newWord.getBestWord()
+        
+        if bestWord != nil{
+            print("likely word: " + (bestWord?.toString())!)
+            print("–––––––––––––")
+        }
     }
     
     override func didReceiveMemoryWarning() {

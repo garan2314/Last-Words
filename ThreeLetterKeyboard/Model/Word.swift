@@ -57,12 +57,25 @@ public class Word{
     
     func setBestWord()
     {
-        letters = getBestWord().letters //set the current word to the best possible word rn
+        var bestWord = getBestWord()
+        
+        if bestWord != nil{
+            letters = (bestWord?.letters)! //set the current word to the best possible word rn
+        }
     }
     
-    func getBestWord(no: Int = 1) -> Word {
+    func getBestWord(no: Int = 1) -> Word? {
 
-        var bestWord = getPossibleWords()[no-1]
+        var bestWord : Word?
+        
+        if getPossibleWords().count > 0
+        {
+            bestWord = getPossibleWords()[no-1]
+        }
+        else
+        {
+            bestWord = nil
+        }
 
         return bestWord
     }
@@ -166,7 +179,7 @@ public class Word{
     
     
     //displays word
-    public func display() -> String
+    public func toString() -> String
     {
         var dword : String = ""
         
@@ -177,6 +190,15 @@ public class Word{
         dword = dword.capitalized
         
         return dword
+    }
+    
+    
+    //save current word into dictionary
+    public func save()
+    {
+        var newDic = WordDictionary()
+        
+        newDic.addWord(chars: toString())
     }
 }
 
