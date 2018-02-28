@@ -66,8 +66,6 @@ class ViewController: UIViewController {
             print(letter)
         }
         
-        print("current word: ")
-        
         var string = newWord.toString()
         
         if newWord.isValid
@@ -75,7 +73,8 @@ class ViewController: UIViewController {
             string = string + " is valid!"
         }
         
-        print(string)
+        print("\n–––––––––––––")
+        print("current word: " + string)
         
         
         if !newWord.hasMore
@@ -88,6 +87,7 @@ class ViewController: UIViewController {
         var bestWord = newWord.getBestWord()
         
         if bestWord != nil{
+            print("\n–––––––––––––")
             print("likely word: " + (bestWord?.toString())!)
             print("–––––––––––––")
         }
