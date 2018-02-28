@@ -47,13 +47,14 @@ public class Word{
     func getNextLetter(no : Int) -> String { //getLetter is non zero indexed
         var wordIndex : Int = no-1 //zero indexes it for use in array
         
-        var nextLetter : String = "no more letter lol"
+        var nextLetter : String = "end"
 
         var possiblewords = getPossibleWords()
         
-        if possiblewords.count == no //if there is a word for the chosen letter number
+        if possiblewords.count >= no //if there is a word for the chosen letter number
         {
             //check if the word has more letters
+            
             if possiblewords[wordIndex].letters.count > self.letters.count
             {
                 nextLetter = possiblewords[wordIndex].letters[self.letters.count] //.count by itself provides +1 index of current word
@@ -66,6 +67,54 @@ public class Word{
             }
         }
         return nextLetter
+    }
+    
+    func getNextFew(num : Int = 3) -> [String] //num is the max num of letters to get (or display later, default is 3)
+    {
+        var letters : [String] = []
+        
+        var count : Int = 1
+        
+        //iterate til n letters are found or ended alr
+        while true {
+            
+            var currentLetter = getNextLetter(no: count)
+            
+            if currentLetter == "end"
+            {
+                break
+            }
+                
+            else
+            {
+                //check if there is a possibly completed word already but theres more options, to remove the completed one for more useful possible letters???
+                if letters.contains("completed")
+                {
+                    letters.remove(at: count-2)
+                }
+                
+                
+                if !letters.contains(currentLetter)
+                {
+                    letters.append(currentLetter)
+                    //if 3 letters are in array, break
+
+                    if letters.count == num
+                    {
+                        break
+                    }
+                }
+            }
+            
+            count = count+1
+        }
+        
+        if letters.count == 0
+        {
+            print("no possible words")
+        }
+        
+        return letters
     }
     
     
