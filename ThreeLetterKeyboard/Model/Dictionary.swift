@@ -30,6 +30,8 @@ public class WordDictionary
         addWord(chars: "applecider")
         addWord(chars: "bone")
         addWord(chars: "buttocks")
+        
+        //https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt
     }
     
     func addWord(chars : String) {
