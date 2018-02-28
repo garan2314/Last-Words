@@ -20,11 +20,16 @@ public class WordDictionary
         addWord(chars: "abc")
         addWord(chars: "af")
         addWord(chars: "axe")
+        addWord(chars: "app")
         addWord(chars: "apple")
+        addWord(chars: "applet")
+        addWord(chars: "application")
+        addWord(chars: "apple")
+        addWord(chars: "applejuice")
         addWord(chars: "axclibur")
+        addWord(chars: "applecider")
         addWord(chars: "bone")
         addWord(chars: "buttocks")
-
     }
     
     func addWord(chars : String) {

@@ -19,10 +19,13 @@ class ViewController: UIViewController {
         
         
         type(letter: "a")
-        type(letter: "a")
-        type(letter: "a")
-
-
+        type(letter: "p")
+        type(letter: "p")
+        type(letter: "l")
+        type(letter: "i")
+        newWord.removeLetter()
+        type(letter: "e")
+        type(letter: "c")
     }
     
     func type(letter : String){

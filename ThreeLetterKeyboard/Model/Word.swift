@@ -11,10 +11,15 @@ import Foundation
 public class Word{
     
     public var letters : [String]
+    public var isValid : Bool? //if word is legit in current state
+    public var hasMore : Bool? //if word has more possible words
     
     //for creation of words from empty
     init() {
         letters = []
+        
+        isValid = false
+        hasMore = true
     }
     
     //for creation of words from dictionary
@@ -34,11 +39,17 @@ public class Word{
     func addLetter(letter : String)
     {
         letters.append(letter)
+        //reset validity upon change
+        isValid = false
+        hasMore = true
     }
     
     func removeLetter()
     {
         letters.removeLast()
+        //reset validity upon change
+        isValid = false
+        hasMore = true
     }
     
     
@@ -48,7 +59,7 @@ public class Word{
         var wordIndex : Int = no-1 //zero indexes it for use in array
         
         var nextLetter : String = "end"
-
+        
         var possiblewords = getPossibleWords()
         
         if possiblewords.count >= no //if there is a word for the chosen letter number
@@ -59,11 +70,12 @@ public class Word{
             {
                 nextLetter = possiblewords[wordIndex].letters[self.letters.count] //.count by itself provides +1 index of current word
             }
-            
+                
             //word is completed
             else
             {
                 nextLetter = "completed"
+                isValid = true
             }
         }
         return nextLetter
@@ -87,21 +99,24 @@ public class Word{
                 
             else
             {
-                //check if there is a possibly completed word already but theres more options, to remove the completed one for more useful possible letters???
-                if letters.contains("completed")
+                //ignore completed
+                if !(currentLetter == "completed")
                 {
-                    letters.remove(at: count-2)
-                }
-                
-                
-                if !letters.contains(currentLetter)
-                {
-                    letters.append(currentLetter)
-                    //if 3 letters are in array, break
-
-                    if letters.count == num
+                    if !letters.contains(currentLetter) //if the next letter is already being displayed, dont display
                     {
-                        break
+                        letters.append(currentLetter)
+                        //if 3 letters are in array, break
+                        
+                        if letters.count == num
+                        {
+                            break
+                        }
+                    }
+                    else
+                    {
+                        //increase priority of current letter due to its frequency
+                        //will require a dictionary to assign frequency int to each letter, and then later sort the array based on highest frequency
+                        //maybe highest put in the easiest to reach region
                     }
                 }
             }
@@ -111,7 +126,8 @@ public class Word{
         
         if letters.count == 0
         {
-            print("no possible words")
+            //print("no possible words")
+            hasMore = false //set as no more words
         }
         
         return letters
@@ -139,12 +155,24 @@ public class Word{
     //displays word
     public func display()
     {
-        var word : String = ""
+        var dword : String = ""
         
         for letter in letters{
-            word = word + letter
+            dword = dword + letter
         }
         
-        print(word)
+        dword = dword.capitalized
+        
+        if isValid!
+        {
+            dword = dword + " is valid!"
+        }
+        print(dword)
+        
+        if !hasMore!
+        {
+            print("No more possible words")
+        }
     }
 }
+
