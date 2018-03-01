@@ -91,6 +91,7 @@ public class Word{
                     if word.letters.count > letters.count
                     {
                         bestWord = word
+                        break
                     }
                 }
             }
