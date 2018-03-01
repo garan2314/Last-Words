@@ -13,6 +13,7 @@ public class Word{
     public var letters : [String]
     public var isValid : Bool //if word is legit in current state
     public var hasMore : Bool //if word has more possible words
+    private var acceptLetters : String = "abcdefghijklmnopqrstuvwxyz"
     
     //for creation of words from empty
     init() {
@@ -31,7 +32,13 @@ public class Word{
         hasMore = true
         
         for char in chars{
+            /*
             if char != " "
+            {
+                letters.append(String(char).lowercased())
+            }
+                */
+            if acceptLetters.contains(String(char).lowercased())
             {
                 letters.append(String(char).lowercased())
             }
@@ -75,9 +82,6 @@ public class Word{
         {
             //if more words can be written and first best word is already written, recommend second best word if possible
             bestWord = getPossibleWords()[0]
-            
-            print((bestWord?.letters.count)!)
-            print(letters.count)
             
             if ((bestWord?.letters.count)! == letters.count)
             {
