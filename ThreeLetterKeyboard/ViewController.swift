@@ -105,16 +105,31 @@ class ViewController: UIViewController {
                 btLetter3.setTitle("", for: .normal)
             }
         }
+        else //if no more possible letters
+        {
+            btLetter1.setTitle("", for: .normal)
+            btLetter2.setTitle("", for: .normal)
+            btLetter3.setTitle("", for: .normal)
+        }
+        
         
         let bestWord = newWord.getBestWord()
         
         if bestWord != nil
         {
             btBestWord.setTitle(bestWord?.toString(), for: .normal)
+            btBestWord.isEnabled = true
+            
+            if bestWord?.toString() == newWord.toString()
+            {
+                btBestWord.isEnabled = false
+            }
+            
         }
         else
         {
             btBestWord.setTitle("No predictable words", for: .normal)
+            btBestWord.isEnabled = false
         }
         
         //must occur after getnextfew
