@@ -27,7 +27,7 @@ public class Word{
     {
         letters = []
         
-        isValid = true
+        isValid = false
         hasMore = true
         
         for char in chars{
