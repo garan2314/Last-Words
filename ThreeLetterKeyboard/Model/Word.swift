@@ -67,13 +67,30 @@ public class Word{
         }
     }
     
-    func getBestWord(no: Int = 1) -> Word? {
+    func getBestWord() -> Word? {
 
         var bestWord : Word?
         
         if getPossibleWords().count > 0
         {
-            bestWord = getPossibleWords()[no-1]
+            //if more words can be written and first best word is already written, recommend second best word if possible
+            bestWord = getPossibleWords()[0]
+            
+            print((bestWord?.letters.count)!)
+            print(letters.count)
+            
+            if ((bestWord?.letters.count)! == letters.count)
+            {
+                //scan for a word that is better that is possible
+                for word in getPossibleWords()
+                {
+                    if word.letters.count > letters.count
+                    {
+                        bestWord = word
+                    }
+                }
+            }
+            
         }
         else
         {
