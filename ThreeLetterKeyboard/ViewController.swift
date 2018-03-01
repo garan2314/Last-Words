@@ -67,7 +67,8 @@ class ViewController: UIViewController {
     {
         newWord.save()
         print("saved '" + newWord.toString()+"'")
-        newWord.letters = []
+        
+        newWord = Word()
         update()
     }
     
