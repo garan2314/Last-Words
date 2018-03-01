@@ -13,22 +13,36 @@ class ViewController: UIViewController {
     var newDic = WordDictionary()
     var newWord = Word()
 
+    @IBOutlet weak var lbCurrWord: UILabel!
+    @IBOutlet weak var btLetter1: UIButton!
+    @IBOutlet weak var btLetter2: UIButton!
+    @IBOutlet weak var btLetter3: UIButton!
+    @IBOutlet weak var btBestWord: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         update()
-        type(letter: "b")
-        type(letter: "o")
-        type(letter: "o")
-        type(letter: "b")
-        type(letter: "s")
-        save()
-        type(letter: "b")
-        type(letter: "o")
-        type(letter: "o")
+    }
+    
+    @IBAction func btLetter1(_ sender: Any) {
+        type(letter: btLetter1.title(for: .normal)!)
+    }
+    @IBAction func btLetter2(_ sender: Any) {
+        type(letter: btLetter2.title(for: .normal)!)
+    }
+    @IBAction func btLetter3(_ sender: Any) {
+        type(letter: btLetter3.title(for: .normal)!)
+    }
+    @IBAction func btBestWord(_ sender: Any) {
         best()
-        
+    }
+    @IBAction func btBack(_ sender: Any) {
+        back()
+    }
+    @IBAction func btSpace(_ sender: Any) {
+        save()
     }
     
     func type(letter : String)
@@ -56,40 +70,61 @@ class ViewController: UIViewController {
         newWord.letters = []
         update()
     }
-
     
     func update(){
-        
-        let next3 = newWord.getNextFew()
-        
-        for letter in next3{
-            print(letter)
-        }
-        
         var string = newWord.toString()
         
+        lbCurrWord.text = newWord.toString()
+        
+        let letters = newWord.getNextFew()
+        
+        if newWord.hasMore //hasmore is only updated upon getNextFew, must execute after
+        {
+            if letters.count>=1
+            {
+                btLetter1.setTitle(letters[0], for: .normal)
+            }
+            else
+            {
+                btLetter1.setTitle("", for: .normal)
+            }
+            if letters.count>=2
+            {
+                btLetter2.setTitle(letters[1], for: .normal)
+            }
+            else
+            {
+                btLetter2.setTitle("", for: .normal)
+            }
+            if letters.count>=3
+            {
+                btLetter3.setTitle(letters[2], for: .normal)
+            }
+            else
+            {
+                btLetter3.setTitle("", for: .normal)
+            }
+        }
+        
+        let bestWord = newWord.getBestWord()
+        
+        if bestWord != nil
+        {
+            btBestWord.setTitle(bestWord?.toString(), for: .normal)
+        }
+        else
+        {
+            btBestWord.setTitle("No predictable words", for: .normal)
+        }
+        
+        //must occur after getnextfew
         if newWord.isValid
         {
-            string = string + " is valid!"
+            lbCurrWord.textColor = UIColor.green
         }
-        
-        print("\n–––––––––––––")
-        print("current word: " + string)
-        
-        
-        if !newWord.hasMore
+        else
         {
-            print("No more possible words")
-        }
-        print("–––––––––––––")
-        
-        
-        var bestWord = newWord.getBestWord()
-        
-        if bestWord != nil{
-            print("\n–––––––––––––")
-            print("likely word: " + (bestWord?.toString())!)
-            print("–––––––––––––")
+            lbCurrWord.textColor = UIColor.darkText
         }
     }
     

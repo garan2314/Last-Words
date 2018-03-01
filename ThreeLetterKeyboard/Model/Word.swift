@@ -49,10 +49,13 @@ public class Word{
     
     func removeLetter()
     {
-        letters.removeLast()
-        //reset validity upon change
-        isValid = false
-        hasMore = true
+        if letters.count>=1
+        {
+            letters.removeLast()
+            //reset validity upon change
+            isValid = false
+            hasMore = true
+        }
     }
     
     func setBestWord()
