@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     var newWord = Word()
     var pageNo = 1
     
-    @IBOutlet weak var lbCurrWord: UILabel!
     @IBOutlet weak var tbCurrWord: UITextField!
     
     @IBOutlet weak var btLetter1: UIButton!
@@ -123,7 +122,7 @@ class ViewController: UIViewController {
         
         var string = newWord.toString()
         
-        lbCurrWord.text = newWord.toString()
+        tbCurrWord.text = newWord.toString()
         
         //let letters = newWord.getNextFew()
         let letters = newWord.getLetters()
@@ -196,14 +195,12 @@ class ViewController: UIViewController {
         //must occur after getnextfew
         if newWord.isValid
         {
-            lbCurrWord.textColor = UIColor.green
+            tbCurrWord.textColor = UIColor.green
         }
         else
         {
-            lbCurrWord.textColor = UIColor.darkText
+            tbCurrWord.textColor = UIColor.darkText
         }
-    
-        tbCurrWord.text!=lbCurrWord.text!
         
     }
     

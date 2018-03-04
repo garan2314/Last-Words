@@ -64,13 +64,6 @@
                                     <action selector="tbCurrWord:" destination="BYZ-38-t0r" eventType="editingChanged" id="aAK-eF-jct"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AA4-Lt-gqh">
-                                <rect key="frame" x="53" y="0.0" width="225" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-PX-muY">
                                 <rect key="frame" x="326" y="195" width="220" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -131,8 +124,7 @@
                         <outlet property="btLetter4" destination="cZi-PX-muY" id="VWl-yA-8pA"/>
                         <outlet property="btNext" destination="JaL-X3-f6d" id="vgb-pl-lvB"/>
                         <outlet property="btPrev" destination="To5-uj-q8T" id="84q-e1-brB"/>
-                        <outlet property="lbCurrWord" destination="AA4-Lt-gqh" id="BJn-rN-2ww"/>
-                        <outlet property="tbCurrWord" destination="Jsd-5e-uVj" id="3pj-lt-UuR"/>
+                        <outlet property="tbCurrWord" destination="Jsd-5e-uVj" id="65g-IY-ast"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
