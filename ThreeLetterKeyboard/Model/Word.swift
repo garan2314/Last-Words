@@ -225,18 +225,19 @@ public class Word{
     //can either do it using the txt string or the memory array, which is more optimised?
     public func complete()
     {
-        print(myDic.getData().suffix(20))
-        if myDic.getData().lowercased().contains(toString().lowercased()+"\n")
+        if letters.count>0
         {
-            print("contains " + toString())
-        }
-        else
-        {
-            print("does not contain " + toString())
-            myDic.addWord(chars: toString())
+            print(myDic.getData().suffix(20))
+            if myDic.getData().lowercased().contains(toString().lowercased()+"\n")
+            {
+                print("contains " + toString())
+            }
+            else
+            {
+                print("does not contain " + toString())
+                myDic.addWord(chars: toString())
+            }
         }
     }
-    
-    
 }
 

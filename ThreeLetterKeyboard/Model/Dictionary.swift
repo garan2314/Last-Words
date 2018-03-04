@@ -42,7 +42,7 @@ final class WordDictionary
         //check if word exists first, if not dont add??
         DefaultDictionary.append(Word(chars: chars))
         
-        let addedWord = myDic.data + chars + "\n"
+        let addedWord = myDic.data + chars.lowercased() + "\n"
         
         do {
             // Write to the file
