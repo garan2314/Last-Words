@@ -186,8 +186,8 @@ public class Word{
     
     
     //gets possible words in the dictionary that can be written with the current letters
-    //to arrange based on frequency of the words usage
-    //if word appears twice in the text file, put it at the front
+    //frequency based sorting is depracated due to its resource intensive nature
+    //will sort the items upon saving, move to front maybe
     public func getPossibleWords() -> [Word]{
         
         var possiblewords : [Word] = []
@@ -221,24 +221,11 @@ public class Word{
     
     
     //save current word into dictionary
-    //allow multiple saving of words, so based on thet frequency of saving, can better recommend word in the getBest word
+    //check if word already exists and perform actions accordingly
+    //can either do it using the txt string or the memory array, which is more optimised?
     public func save()
     {
-        myDic.addWord(chars: toString())
-        
-        let fileURL = Bundle.main.path(forResource: "google-10000-english", ofType: "txt")
-        
-        let addedWord = myDic.readString + "\n" + toString()
-        
-        do {
-            // Write to the file
-            try addedWord.write(toFile: fileURL!, atomically: true, encoding: String.Encoding.utf8)
-            print("saved " + toString())
-        }
-            
-        catch let error as NSError {
-            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
-        }
+        myDic.addWord(chars: toString())        
     }
 }
 
