@@ -220,12 +220,23 @@ public class Word{
     }
     
     
-    //save current word into dictionary
-    //check if word already exists and perform actions accordingly
+    //complete word
+    //check if word already exists and perform save/prio
     //can either do it using the txt string or the memory array, which is more optimised?
-    public func save()
+    public func complete()
     {
-        myDic.addWord(chars: toString())        
+        print(myDic.getData().suffix(20))
+        if myDic.getData().lowercased().contains(toString().lowercased()+"\n")
+        {
+            print("contains " + toString())
+        }
+        else
+        {
+            print("does not contain " + toString())
+            myDic.addWord(chars: toString())
+        }
     }
+    
+    
 }
 

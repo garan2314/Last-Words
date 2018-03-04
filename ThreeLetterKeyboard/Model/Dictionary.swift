@@ -17,15 +17,15 @@ final class WordDictionary
     
     var DefaultDictionary : [Word] = []
     
-    var readString = ""
+    private var data = ""
     
     let fileURL = Bundle.main.path(forResource: "google-10000-english", ofType: "txt")
     
     private init() {
         //https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt
         do {
-            readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
-            let words = readString.components(separatedBy: .newlines)
+            getData()
+            let words = data.components(separatedBy: .newlines)
         
             for word in words
             {
@@ -39,10 +39,10 @@ final class WordDictionary
     }
     
     func addWord(chars : String) {
-        //check if word exists first, if it does, increase the priority??
+        //check if word exists first, if not dont add??
         DefaultDictionary.append(Word(chars: chars))
         
-        let addedWord = myDic.readString + "\n" + chars
+        let addedWord = myDic.data + chars + "\n"
         
         do {
             // Write to the file
@@ -50,10 +50,22 @@ final class WordDictionary
             print("saved " + chars)
         }
             
-        catch let error as NSError {
+        catch let error as NSError
+        {
             print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
         }
-
+    }
+    
+    func getData() -> String
+    {
+        do {
+            data = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
+        }
+        catch let error as NSError
+        {
+            print(error)
+        }
+        return data
     }
 }
 

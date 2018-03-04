@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     
     func save()
     {
-        newWord.save()
+        newWord.complete()
         
         newWord = Word()
         update()
