@@ -21,16 +21,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPe-xS-KSO">
                                 <rect key="frame" x="110" y="37" width="220" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Letter 1"/>
                                 <connections>
                                     <action selector="btLetter1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZb-sM-XNU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBL-sA-b1V">
-                                <rect key="frame" x="326" y="44" width="220" height="150"/>
+                                <rect key="frame" x="326" y="37" width="220" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Letter 2"/>
                                 <connections>
                                     <action selector="btLetter2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VhX-5W-gwV"/>
@@ -39,7 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAm-FY-J9a">
                                 <rect key="frame" x="110" y="195" width="220" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Letter 3"/>
                                 <connections>
                                     <action selector="btLetter3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8BT-wg-607"/>
@@ -67,18 +67,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-PX-muY">
                                 <rect key="frame" x="326" y="195" width="220" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Letter 4"/>
                                 <connections>
                                     <action selector="btLetter4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gcG-8f-X6g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDh-zO-nnZ">
-                                <rect key="frame" x="312" y="345" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Space"/>
-                                <connections>
-                                    <action selector="btSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TGH-AA-gT5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0T-Qi-QZT">
@@ -92,7 +84,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To5-uj-q8T">
                                 <rect key="frame" x="0.0" y="37" width="102" height="338"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
                                 <state key="normal" title="👈"/>
                                 <connections>
                                     <action selector="btPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ahw-5g-hKl"/>
@@ -106,10 +98,18 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaL-X3-f6d">
                                 <rect key="frame" x="565" y="37" width="102" height="338"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
                                 <state key="normal" title="👉"/>
                                 <connections>
                                     <action selector="btNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kci-CW-gAm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDh-zO-nnZ">
+                                <rect key="frame" x="312" y="345" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Space"/>
+                                <connections>
+                                    <action selector="btSpace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TGH-AA-gT5"/>
                                 </connections>
                             </button>
                         </subviews>
