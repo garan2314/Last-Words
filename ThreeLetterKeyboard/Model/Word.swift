@@ -15,10 +15,6 @@ public class Word{
     public var hasMore : Bool //if word has more possible words
     private var acceptLetters : String = "abcdefghijklmnopqrstuvwxyz"
     
-    let fileURL = Bundle.main.path(forResource: "google-10000-english", ofType: "txt")
-    
-    var readString = ""
-    
     //for creation of words from empty
     init() {
         letters = []
@@ -232,19 +228,19 @@ public class Word{
         
         newDic.addWord(chars: toString())
         
-        /*
-        //append the word into the text file too
-        do {            
-            try toString().write(to: fileURL!, atomically: false, encoding: .utf8)
+        let fileURL = Bundle.main.path(forResource: "google-10000-english", ofType: "txt")
+        
+        let addedWord = newDic.readString + "\n" + toString()
+        
+        do {
+            // Write to the file
+            try addedWord.write(toFile: fileURL!, atomically: true, encoding: String.Encoding.utf8)
             print("saved " + toString())
-
         }
             
-        catch let error as NSError{
-            print(error)
+        catch let error as NSError {
+            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
         }
- */
-
     }
 }
 
