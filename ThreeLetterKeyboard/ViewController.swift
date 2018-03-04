@@ -83,41 +83,35 @@ class ViewController: UIViewController {
         
         lbCurrWord.text = newWord.toString()
         
-        let letters = newWord.getNextFew()
-        
-        if newWord.hasMore //hasmore is only updated upon getNextFew, must execute after
+        //let letters = newWord.getNextFew()
+        let letters = newWord.getLetters()
+    
+        if letters.count>=1
         {
-            if letters.count>=1
-            {
-                btLetter1.setTitle(letters[0], for: .normal)
-                btLetter1.isEnabled = true
-            }
-            else
-            {
-                clearOption(option: 1)
-            }
-            if letters.count>=2
-            {
-                btLetter2.setTitle(letters[1], for: .normal)
-                btLetter2.isEnabled = true
-            }
-            else
-            {
-                clearOption(option: 2)
-            }
-            if letters.count>=3
-            {
-                btLetter3.setTitle(letters[2], for: .normal)
-                btLetter3.isEnabled = true
-            }
-            else
-            {
-                clearOption(option: 3)
-            }
+            btLetter1.setTitle(letters[0], for: .normal)
+            btLetter1.isEnabled = true
         }
-        else //if no more possible letters
+        else
         {
-            clearOption()
+            clearOption(option: 1)
+        }
+        if letters.count>=2
+        {
+            btLetter2.setTitle(letters[1], for: .normal)
+            btLetter2.isEnabled = true
+        }
+        else
+        {
+            clearOption(option: 2)
+        }
+        if letters.count>=3
+        {
+            btLetter3.setTitle(letters[2], for: .normal)
+            btLetter3.isEnabled = true
+        }
+        else
+        {
+            clearOption(option: 3)
         }
         
         

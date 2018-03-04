@@ -13,14 +13,15 @@ public class Word{
     public var letters : [String]
     public var isValid : Bool //if word is legit in current state
     public var hasMore : Bool //if word has more possible words
-    private let acceptLetters : String = "abcdefghijklmnopqrstuvwxyz"
-    
+    //private let acceptLetters : String = "abcdefghijklmnopqrstuvwxyz"
+    private let acceptLetters : String = "etaoinsrhldcumfpgwybvkxjqz" //in order of frequency for use in spare letters
+
     //for creation of words from empty
     init() {
         letters = []
         
         isValid = false
-        hasMore = true
+        hasMore = true //to depracate
     }
     
     //for creation of words from dictionary
@@ -193,7 +194,65 @@ public class Word{
         
         return letters
     }
-    
+
+    func getLetters() -> [String] //num is the max num of letters to get (or display later, default is 3)
+    {
+        var letters : [String] = []
+        
+        var count : Int = 1
+        
+        //iterate til n letters are found or ended alr
+        while true {
+            
+            var currentLetter = getNextLetter(no: count)
+            
+            if currentLetter == "end" || letters.count == 8 //26 requires it to find the rare instance of hitting all letters in the said combination, will iterate through the full list on the first letter
+            {
+                break
+            }
+                
+            else
+            {
+                //ignore completed
+                if !(currentLetter == "completed")
+                {
+                    if !letters.contains(currentLetter) //if the next letter is already being displayed, dont display
+                    {
+                        letters.append(currentLetter)
+                        //print(currentLetter)
+                    }
+                }
+                else
+                {
+                    break
+                }
+            }
+            
+            count = count+1
+        }
+        
+        /*
+        if letters.count == 0
+        {
+            //print("no possible words")
+            hasMore = false //set as no more words
+        }
+ */
+        
+        var letter : String = ""
+        
+        for char in acceptLetters
+        {
+            letter = String(char)
+            if !(letters.contains(letter)) //if the current suggested letters do not consist of the letter, add it
+            {
+                letters.append(letter)
+            }
+        }
+        
+        return letters
+    }
+
     
     //gets possible words in the dictionary that can be written with the current letters
     //frequency based sorting is depracated due to its resource intensive nature
