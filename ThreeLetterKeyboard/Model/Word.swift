@@ -75,33 +75,47 @@ public class Word{
     }
     
     func getBestWord() -> Word? {
-
+        
         var bestWord : Word?
         
-        if getPossibleWords().count > 0
+        var possibleWords = getPossibleWords()
+        
+        
+        //check if its the first letter, prevent prompting for the same word that was just written (doesn't help at all)
+        if letters.count==0
         {
-            //if more words can be written and first best word is already written, recommend second best word if possible
-            bestWord = getPossibleWords()[0]
-            
-            if ((bestWord?.letters.count)! == letters.count)
-            {
-                //scan for a word that is better that is possible
-                for word in getPossibleWords()
-                {
-                    if word.letters.count > letters.count
-                    {
-                        bestWord = word
-                        break
-                    }
-                }
-            }
-            
+            print("first word")
+            bestWord = Word(chars: "the")
+            print(bestWord?.toString())
         }
         else
         {
-            bestWord = nil
+            if possibleWords.count > 0
+            {
+                //if more words can be written and first best word is already written, recommend second best word if possible
+                bestWord = possibleWords[0]
+                print("theres words")
+                
+                if ((bestWord?.letters.count)! == letters.count)
+                {
+                    print("theres better words")
+                    //scan for a word that is better that is possible
+                    
+                    for word in possibleWords
+                    {
+                        if word.letters.count > letters.count
+                        {
+                            bestWord = word
+                            break
+                        }
+                    }
+                }
+            }
+            else
+            {
+                bestWord = nil
+            }
         }
-
         return bestWord
     }
     
@@ -227,7 +241,6 @@ public class Word{
     {
         if letters.count>0
         {
-            print(myDic.getData().suffix(20))
             if myDic.getData().lowercased().contains(toString().lowercased()+"\n")
             {
                 print("contains " + toString())
@@ -237,6 +250,7 @@ public class Word{
                 print("does not contain " + toString())
                 myDic.addWord(chars: toString())
             }
+            print(myDic.getData().prefix(50))
         }
     }
 }

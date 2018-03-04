@@ -24,8 +24,7 @@ final class WordDictionary
     private init() {
         //https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt
         do {
-            getData()
-            let words = data.components(separatedBy: .newlines)
+            let words = getData().components(separatedBy: .newlines)
         
             for word in words
             {
@@ -38,11 +37,11 @@ final class WordDictionary
         }
     }
     
-    func addWord(chars : String) {
-        //check if word exists first, if not dont add??
-        DefaultDictionary.append(Word(chars: chars))
+    func addWord(chars : String) {//rearranged to put new words at the front so theyre more prioritised
+        //DefaultDictionary.append(Word(chars: chars))
+        DefaultDictionary.insert(Word(chars: chars), at: 0)
         
-        let addedWord = myDic.data + chars.lowercased() + "\n"
+        let addedWord =  chars.lowercased() + "\n" + getData()
         
         do {
             // Write to the file
