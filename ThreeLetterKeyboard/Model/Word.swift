@@ -13,7 +13,7 @@ public class Word{
     public var letters : [String]
     public var isValid : Bool //if word is legit in current state
     public var hasMore : Bool //if word has more possible words
-    private var acceptLetters : String = "abcdefghijklmnopqrstuvwxyz"
+    private let acceptLetters : String = "abcdefghijklmnopqrstuvwxyz"
     
     //for creation of words from empty
     init() {
@@ -84,9 +84,7 @@ public class Word{
         //check if its the first letter, prevent prompting for the same word that was just written (doesn't help at all)
         if letters.count==0
         {
-            print("first word")
             bestWord = Word(chars: "the")
-            print(bestWord?.toString())
         }
         else
         {
@@ -94,11 +92,9 @@ public class Word{
             {
                 //if more words can be written and first best word is already written, recommend second best word if possible
                 bestWord = possibleWords[0]
-                print("theres words")
                 
                 if ((bestWord?.letters.count)! == letters.count)
                 {
-                    print("theres better words")
                     //scan for a word that is better that is possible
                     
                     for word in possibleWords
@@ -239,17 +235,22 @@ public class Word{
     //can either do it using the txt string or the memory array, which is more optimised?
     public func complete()
     {
-        if letters.count>0
+        if letters.count>0 //if its not empty
         {
+            //check if it exists in the dictionary already
             if myDic.getData().lowercased().contains(toString().lowercased()+"\n")
             {
                 print("contains " + toString())
+                myDic.prioWord(chars: toString())
             }
+                
             else
             {
                 print("does not contain " + toString())
                 myDic.addWord(chars: toString())
             }
+            
+            //prints recently added words
             print(myDic.getData().prefix(50))
         }
     }

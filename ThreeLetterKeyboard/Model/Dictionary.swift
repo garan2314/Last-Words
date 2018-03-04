@@ -26,9 +26,17 @@ final class WordDictionary
         do {
             let words = getData().components(separatedBy: .newlines)
         
+            var newWord : Word
+            
             for word in words
             {
-                DefaultDictionary.append(Word(chars: word))
+                //dont add useless words
+                newWord = Word(chars: word)
+                
+                if newWord.letters.count > 0
+                {
+                    DefaultDictionary.append(newWord)
+                }
             }
         }
         catch let error as NSError
@@ -46,13 +54,49 @@ final class WordDictionary
         do {
             // Write to the file
             try addedWord.write(toFile: fileURL!, atomically: true, encoding: String.Encoding.utf8)
-            print("saved " + chars)
+            print("added " + chars)
         }
             
         catch let error as NSError
         {
             print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
         }
+    }
+    
+    func removeWord(chars : String)
+    {
+        //removeword
+        var index = 0
+        for dicword in DefaultDictionary
+        {
+            //look for chosen word in the dictionary to remove and readd
+            if (dicword.toString().lowercased() == chars.lowercased())
+            {
+                DefaultDictionary.remove(at: index)
+            }
+            index = index + 1
+        }
+        
+        let removedWord = getData().replacingOccurrences(of: chars.lowercased() + "\n", with: "")
+
+        do {
+            // Write to the file
+            try removedWord.write(toFile: fileURL!, atomically: true, encoding: String.Encoding.utf8)
+            print("removed " + chars)
+        }
+            
+        catch let error as NSError
+        {
+            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+        }
+        
+    }
+    
+    func prioWord(chars : String)
+    {
+        removeWord(chars: chars)
+        addWord(chars: chars)
+        print("prioritised " + chars)
     }
     
     func getData() -> String
