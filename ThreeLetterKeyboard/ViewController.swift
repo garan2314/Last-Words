@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var btLetter3: UIButton!
     @IBOutlet weak var btLetter4: UIButton!
     @IBOutlet weak var btBestWord: UIButton!
+    @IBOutlet weak var btPrev: UIButton!
+    @IBOutlet weak var btNext: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,38 +54,73 @@ class ViewController: UIViewController {
     @IBAction func tbCurrWord(_ sender: Any) {
         //runs upon change to textbox
         newWord = Word(chars: tbCurrWord.text!)
+        pageNo = 1
         update()
     }
     
+    @IBAction func btPrev(_ sender: Any) {
+        pageNo = pageNo - 1
+        update()
+    }
+    @IBAction func btNext(_ sender: Any) {
+        pageNo = pageNo + 1
+        update()
+    }
     
     
     func type(letter : String)
     {
         newWord.addLetter(letter: letter)
+        pageNo = 1
         update()
     }
     
     func back()
     {
         newWord.removeLetter()
+        pageNo = 1
         update()
     }
     
     func best()
     {
         newWord.setBestWord()
+        pageNo = 1
         update()
     }
     
     func save()
     {
         newWord.complete()
-        
+        pageNo = 1
         newWord = Word()
         update()
     }
     
     func update(){
+        
+        if pageNo == 1
+        {
+            btPrev.isEnabled = false
+            btPrev.setTitle("👈🏿", for: .normal)
+            btNext.isEnabled = true
+            btNext.setTitle("👉", for: .normal)
+        }
+        else if pageNo == 6 //26/3
+        {
+            btPrev.isEnabled = true
+            btPrev.setTitle("👈", for: .normal)
+            btNext.isEnabled = false
+            btNext.setTitle("👉🏿", for: .normal)
+        }
+        else
+        {
+            btPrev.isEnabled = true
+            btPrev.setTitle("👈", for: .normal)
+            btNext.isEnabled = true
+            btNext.setTitle("👉", for: .normal)
+        }
+        
         var string = newWord.toString()
         
         lbCurrWord.text = newWord.toString()
