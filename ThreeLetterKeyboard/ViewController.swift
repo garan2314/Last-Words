@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     
     func type(letter : String)
     {
-        newWord.addLetter(letter: letter)
+        newWord.addLetter(letter: letter.lowercased())
         pageNo = 1
         update()
     }
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
         
         if letters.count>=option1+1
         {
-            btLetter1.setTitle(letters[option1], for: .normal)
+            btLetter1.setTitle(letters[option1].uppercased(), for: .normal)
             btLetter1.isEnabled = true
         }
         else
@@ -145,7 +145,7 @@ class ViewController: UIViewController {
         }
         if letters.count>=option2+1
         {
-            btLetter2.setTitle(letters[option2], for: .normal)
+            btLetter2.setTitle(letters[option2].uppercased(), for: .normal)
             btLetter2.isEnabled = true
         }
         else
@@ -154,7 +154,7 @@ class ViewController: UIViewController {
         }
         if letters.count>=option3+1
         {
-            btLetter3.setTitle(letters[option3], for: .normal)
+            btLetter3.setTitle(letters[option3].uppercased(), for: .normal)
             btLetter3.isEnabled = true
         }
         else
@@ -164,7 +164,7 @@ class ViewController: UIViewController {
         
         if letters.count>=option4+1
         {
-            btLetter4.setTitle(letters[option4], for: .normal)
+            btLetter4.setTitle(letters[option4].uppercased(), for: .normal)
             btLetter4.isEnabled = true
         }
         else

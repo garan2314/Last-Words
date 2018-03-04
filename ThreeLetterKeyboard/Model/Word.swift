@@ -140,6 +140,7 @@ public class Word{
                 isValid = true
             }
         }
+        
         return nextLetter
     }
     
