@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //need to init a dictionary for it to load all words
-    var newDic = WordDictionary()
     var newWord = Word()
 
     @IBOutlet weak var lbCurrWord: UILabel!

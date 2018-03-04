@@ -192,7 +192,7 @@ public class Word{
         
         var possiblewords : [Word] = []
         
-        for dicword in WordDictionary.DefaultDictionary
+        for dicword in myDic.DefaultDictionary
         {
             //trim each word within the dictionary to match size of current half written word, to compare if it matches
             if (Array(dicword.letters.prefix(letters.count)) == letters)
@@ -224,13 +224,11 @@ public class Word{
     //allow multiple saving of words, so based on thet frequency of saving, can better recommend word in the getBest word
     public func save()
     {
-        var newDic = WordDictionary()
-        
-        newDic.addWord(chars: toString())
+        myDic.addWord(chars: toString())
         
         let fileURL = Bundle.main.path(forResource: "google-10000-english", ofType: "txt")
         
-        let addedWord = newDic.readString + "\n" + toString()
+        let addedWord = myDic.readString + "\n" + toString()
         
         do {
             // Write to the file
