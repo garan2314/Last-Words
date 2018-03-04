@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class WordDictionary
+final class WordDictionary
 {
     public static var DefaultDictionary : [Word] = []
     
