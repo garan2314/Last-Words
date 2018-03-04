@@ -75,7 +75,6 @@ class ViewController: UIViewController {
     func save()
     {
         newWord.save()
-        print("saved '" + newWord.toString()+"'")
         
         newWord = Word()
         update()

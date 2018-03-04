@@ -15,6 +15,10 @@ public class Word{
     public var hasMore : Bool //if word has more possible words
     private var acceptLetters : String = "abcdefghijklmnopqrstuvwxyz"
     
+    let fileURL = Bundle.main.path(forResource: "google-10000-english", ofType: "txt")
+    
+    var readString = ""
+    
     //for creation of words from empty
     init() {
         letters = []
@@ -186,6 +190,8 @@ public class Word{
     
     
     //gets possible words in the dictionary that can be written with the current letters
+    //to arrange based on frequency of the words usage
+    //if word appears twice in the text file, put it at the front
     public func getPossibleWords() -> [Word]{
         
         var possiblewords : [Word] = []
@@ -219,11 +225,26 @@ public class Word{
     
     
     //save current word into dictionary
+    //allow multiple saving of words, so based on thet frequency of saving, can better recommend word in the getBest word
     public func save()
     {
         var newDic = WordDictionary()
         
         newDic.addWord(chars: toString())
+        
+        /*
+        //append the word into the text file too
+        do {            
+            try toString().write(to: fileURL!, atomically: false, encoding: .utf8)
+            print("saved " + toString())
+
+        }
+            
+        catch let error as NSError{
+            print(error)
+        }
+ */
+
     }
 }
 

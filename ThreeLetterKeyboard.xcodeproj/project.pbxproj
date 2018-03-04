@@ -17,6 +17,7 @@
 		1D528D8F2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D8E2042963C00F42D10 /* ThreeLetterKeyboardUITests.swift */; };
 		1D528D9E2042A08C00F42D10 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D9D2042A08C00F42D10 /* Word.swift */; };
 		1D528DA02042A60800F42D10 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D528D9F2042A60800F42D10 /* Dictionary.swift */; };
+		1DC36404204BB95A005DC979 /* google-10000-english.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1DC36403204BB95A005DC979 /* google-10000-english.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1D528D902042963C00F42D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D528D9D2042A08C00F42D10 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		1D528D9F2042A60800F42D10 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		1DC36403204BB95A005DC979 /* google-10000-english.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "google-10000-english.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		1D528D9C2042A06B00F42D10 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1DC36403204BB95A005DC979 /* google-10000-english.txt */,
 				1D528D9D2042A08C00F42D10 /* Word.swift */,
 				1D528D9F2042A60800F42D10 /* Dictionary.swift */,
 			);
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC36404204BB95A005DC979 /* google-10000-english.txt in Resources */,
 				1D528D792042963C00F42D10 /* LaunchScreen.storyboard in Resources */,
 				1D528D762042963C00F42D10 /* Assets.xcassets in Resources */,
 				1D528D712042963C00F42D10 /* Main.storyboard in Resources */,
