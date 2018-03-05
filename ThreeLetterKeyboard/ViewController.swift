@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var newWord = Word()
     var pageNo = 1
+    var sentence : [Word] = []
     
     @IBOutlet weak var tbCurrWord: UITextField!
     
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
         back()
     }
     @IBAction func btSpace(_ sender: Any) {
-        save()
+        space()
     }
     @IBAction func tbCurrWord(_ sender: Any) {
         //runs upon change to textbox
@@ -88,12 +89,26 @@ class ViewController: UIViewController {
         update()
     }
     
-    func save()
+    func space()
     {
         newWord.complete()
         pageNo = 1
+        sentence.append(newWord)
         newWord = Word()
         update()
+        
+        printSentence()
+    }
+    
+    func printSentence()
+    {
+        var string = ""
+        for w in sentence
+        {
+            string = string + w.toString().lowercased() + " "
+        }
+        
+        print(string)
     }
     
     func update(){
